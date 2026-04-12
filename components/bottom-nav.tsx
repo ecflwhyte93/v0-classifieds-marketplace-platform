@@ -2,13 +2,12 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Flame, Plus, MessageCircle, User } from 'lucide-react'
+import { Flame, Plus, User } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const navItems = [
   { href: '/', icon: Flame, label: 'Explore' },
   { href: '/create', icon: Plus, label: 'Create', isCreate: true },
-  { href: '/messages', icon: MessageCircle, label: 'Messages', badge: 1 },
   { href: '/profile', icon: User, label: 'Profile' },
 ]
 

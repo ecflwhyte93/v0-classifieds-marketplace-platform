@@ -1,7 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { SlidersHorizontal, Bell, MapPin, Search, X } from 'lucide-react'
+import { SlidersHorizontal, Bell, MapPin, Search, X, MessageCircle } from 'lucide-react'
+import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { cn } from '@/lib/utils'
@@ -56,6 +57,19 @@ export function Header({
             >
               <Bell className="h-5 w-5" />
               <span className="absolute -right-0.5 -top-0.5 h-2.5 w-2.5 rounded-full bg-primary" />
+            </Button>
+            <Button
+              variant="outline"
+              size="icon"
+              className="relative h-10 w-10 rounded-full border-border"
+              asChild
+            >
+              <Link href="/messages" aria-label="Messages">
+                <MessageCircle className="h-5 w-5" />
+                <span className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-primary-foreground">
+                  1
+                </span>
+              </Link>
             </Button>
             <Button
               variant="outline"
