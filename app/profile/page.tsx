@@ -105,8 +105,8 @@ export default function ProfilePage() {
               <h3 className="font-semibold text-foreground">Upgrade to VIP</h3>
               <p className="text-sm text-muted-foreground">Get featured & unlimited messages</p>
             </div>
-            <Button size="sm" className="rounded-full bg-gradient-to-r from-amber-400 to-orange-500 text-background hover:from-amber-500 hover:to-orange-600">
-              Upgrade
+            <Button size="sm" className="rounded-full bg-gradient-to-r from-amber-400 to-orange-500 text-background hover:from-amber-500 hover:to-orange-600" asChild>
+              <Link href="/upgrade">Upgrade</Link>
             </Button>
           </div>
         </div>

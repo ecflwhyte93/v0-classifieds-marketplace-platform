@@ -3,10 +3,9 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowLeft, Search, MoreVertical, Send } from 'lucide-react'
+import { ArrowLeft, Search, MoreVertical, Send, ChevronLeft } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { BottomNav } from '@/components/bottom-nav'
 import { mockConversations } from '@/lib/mock-data'
 import { cn } from '@/lib/utils'
 
@@ -116,7 +115,14 @@ export default function MessagesPage() {
     <div className="min-h-screen bg-background pb-20">
       {/* Header */}
       <div className="sticky top-0 z-40 bg-background/95 px-4 py-4 backdrop-blur-sm">
-        <h1 className="text-2xl font-bold text-foreground">Messages</h1>
+        <div className="flex items-center gap-3">
+          <Link href="/">
+            <Button variant="ghost" size="icon" className="h-10 w-10 rounded-full">
+              <ArrowLeft className="h-5 w-5" />
+            </Button>
+          </Link>
+          <h1 className="text-2xl font-bold text-foreground">Messages</h1>
+        </div>
         
         {/* Search */}
         <div className="relative mt-4">
@@ -187,7 +193,6 @@ export default function MessagesPage() {
         )}
       </div>
 
-      <BottomNav />
     </div>
   )
 }
