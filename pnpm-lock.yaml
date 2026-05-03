@@ -1,3 +1,13 @@
+# Clean install with approved builds
+rm -rf node_modules pnpm-lock.yaml
+pnpm install
+
+# Build for production
+pnpm run build
+
+# Start production server
+pnpm start
+
 lockfileVersion: '9.0'
 
 settings:
