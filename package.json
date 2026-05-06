@@ -76,4 +76,3 @@
   "pnpm": {
     "onlyBuiltDependencies": ["sharp"]
   }
-} 
