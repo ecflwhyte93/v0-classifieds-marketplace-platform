@@ -46,11 +46,7 @@ export function BottomNav() {
             >
               <div className="relative">
                 <Icon className={cn("h-6 w-6", isActive && "fill-primary/20")} />
-                {item.badge && item.badge > 0 && (
-                  <span className="absolute -right-2 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-primary-foreground">
-                    {item.badge}
-                  </span>
-                )}
+
               </div>
               <span className="text-xs font-medium">{item.label}</span>
             </Link>
